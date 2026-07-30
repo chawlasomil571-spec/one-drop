@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+#nav-bar{
+    height: 130px;
+    width: 100%;
+    border: 2px solid black;
+    background-color: rgb(174, 5, 5);
+    color: white;
+    padding: 10px;
+}
+#nav-details{
+    display: flex;
+    gap: 30px;
+    position: relative;
+    margin-left: 1050px;
+    margin-top: -50px;
+} 
+.links{
+    color: white;
+    font-size: 20px;
+    
+}
+.img-logo{
+    height: 130px;
+    width: 850px;
+
+    background-color: aliceblue;
+    position: relative;
+    margin-top: -89px;
+    margin-left: 190px;
+    background-image: url(/images/logo-blood-donation.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.container{
+    display: flex;
+}
+.container #c1{
+    border: 2px solid black;
+    height: 500px;
+    width: 400px;
+}
+.container #c2{
+    border: 2px solid black;
+    height: 500px;
+    width: 800px;
+    display: flex;
+}
+.container #c3{
+    border: 2px solid black;
+    height: 500px;
+    width: 400px;
+    display: flex;
+}
