@@ -1,56 +1,117 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-#nav-bar{
-    height: 130px;
-    width: 100%;
-    border: 2px solid black;
-    background-color: rgb(174, 5, 5);
-    color: white;
-    padding: 10px;
+.container{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 1fr;
 }
-#nav-details{
-    display: flex;
-    gap: 30px;
-    position: relative;
-    margin-left: 1050px;
-    margin-top: -50px;
-} 
-.links{
-    color: white;
-    font-size: 20px;
+.navbar{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.left{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border: 5px solid white;
+    overflow: auto;
     
 }
-.img-logo{
-    height: 130px;
-    width: 850px;
-
-    background-color: aliceblue;
+.middle{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border: 5px solid white;
+}
+.right{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    border: 5px solid white;
+}
+.link{
+    color: white;
+    display: flex;
+    text-align: center;
+    /* justify-content: space-between; */
+    gap: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.navbar .link a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+}
+.middle{
+    overflow: hidden;
     position: relative;
-    margin-top: -89px;
-    margin-left: 190px;
-    background-image: url(/images/logo-blood-donation.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
 }
-.container{
+
+.slider{
     display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 16s infinite;
 }
-.container #c1{
-    border: 2px solid black;
-    height: 500px;
-    width: 400px;
+
+.slider img{
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
-.container #c2{
-    border: 2px solid black;
-    height: 500px;
-    width: 800px;
-    display: flex;
+
+@keyframes slide{
+
+    /* First Image */
+    0%,20%{
+        transform: translateX(0%);
+    }
+
+    /* Second Image */
+    25%,45%{
+        transform: translateX(-25%);
+    }
+
+    /* Third Image */
+    50%,70%{
+        transform: translateX(-50%);
+    }
+
+    /* Fourth Image */
+    75%,95%{
+        transform: translateX(-75%);
+    }
+
+    /* Back to First */
+    100%{
+        transform: translateX(0%);
+    }
 }
-.container #c3{
-    border: 2px solid black;
-    height: 500px;
-    width: 400px;
-    display: flex;
+.left .Eligibility{
+    color: azure;
+}
+
+.left .Eligibility p{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.left .Eligibility h1{
+    text-align: center;
+    text-decoration: underline ;
+}
+.right .videos{
+    color: azure;
+    text-align: center;
 }
